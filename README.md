@@ -7,3 +7,7 @@ This repository tracks my progress in the MongoDB University course.
 1. Focused on creating queries using the Node.js driver
 2. Implemented command line options to modify MongoDB queries
 3. Created queryDocument object utilizing the user's specified options
+
+# November 7, 2016 - Completed Week 4
+1. Analyzed advantages of normalized data in relational databases
+2. Studied database design in Mongo without using design schema
