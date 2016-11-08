@@ -1,5 +1,6 @@
 # MongoDB-usingNode.js
 MongoDB projects using Node.js
+
 This repository tracks my progress in the MongoDB University course.
 
 ## 11/7/2016 - Completed Week 4 - Schema Design
