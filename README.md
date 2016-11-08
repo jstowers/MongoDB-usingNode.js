@@ -3,7 +3,8 @@ MongoDB projects using Node.js
 
 This repository tracks my progress in the MongoDB University course.
 
-## 11/7/2016 - Completed Week 4 - Schema Design
+## Completed Week 4 - Schema Design 
+(11/7/2016)
 1. Analyzed advantages of normalized data in relational databases
 2. Studied database design in Mongo without using design schema
 
