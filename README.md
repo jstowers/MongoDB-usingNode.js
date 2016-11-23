@@ -1,4 +1,4 @@
-# MongoDB Course Using Node.js
+# MongoDB Using Node.js
 
 This repository tracks my progress in the MongoDB University course.
 
