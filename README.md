@@ -3,7 +3,7 @@
 This repository tracks my progress in the MongoDB University course.
 
 ## November 21, 2016 - Completed Week 6 - Aggregation Frameworks
-1. Created aggregation frameworks use the aggregate() method. 
+1. Created aggregation frameworks for database collections using the aggregate() method. 
 2. Aggregation frameworks implement a pipeline system that consists of stages that each perform a unique operation on a collection of documents.
 3. Basic pipeline operations include $match, $project, $sort, $skip, and $limit.
 4. Designed sophisticated, multi-stage sort queries using $unwind and $group for a Crunchbase database and a school grades database.
