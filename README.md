@@ -9,7 +9,8 @@ This repository tracks my progress in the MongoDB University course.
 4. Designed sophisticated, multi-stage sort queries using $unwind and $group for a Crunchbase database and a school grades database.
 5. Added group accumulators like $sum, $avg, $push, and $addToSet.
 
-## An example using $unwind, $group, and $addToSet:
+### Example:
+#### Using the Crunchbase database, write an aggregation query that determines the number of unique companies associated with each person.
 
 ```` javascript
 db.companies.aggregate([
