@@ -22,7 +22,7 @@ db.companies.aggregate([
 	{ $project: {name:1, relationships:1, _id:0}},
 
 	// $unwind deconstructs the relationships array and 
-        // creates a new document for each element of that array
+    // creates a new document for each element of that array
 	{ $unwind: "$relationships" },
 
 	// group by person and count the number of unique
@@ -38,7 +38,6 @@ db.companies.aggregate([
 	{ $sort: { count:-1 }}
 	
 ]).pretty();
-
 ````
 
 ## November 7, 2016 - Completed Week 4 - Schema Design
