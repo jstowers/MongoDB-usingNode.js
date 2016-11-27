@@ -14,7 +14,7 @@ This repository tracks my progress in the MongoDB University course.
 
 ```` javascript
 db.companies.aggregate([
-	
+
 	// match on relationships that exist
 	{ $match: { "relationships.person" : { $ne: null}}},
 
@@ -22,11 +22,11 @@ db.companies.aggregate([
 	{ $project: {name:1, relationships:1, _id:0}},
 
 	// $unwind deconstructs the relationships array and 
-    // creates a new document for each element of that array
+        // creates a new document for each element of that array
 	{ $unwind: "$relationships" },
 
 	// group by person and count the number of unique
-	// companies that person has worked for
+	// companies associated with that person
 	{ $group: {
 		_id: "$relationships.person",
 		companies: {$addToSet: "$name"},
