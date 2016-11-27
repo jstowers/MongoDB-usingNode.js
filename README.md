@@ -9,6 +9,37 @@ This repository tracks my progress in the MongoDB University course.
 4. Designed sophisticated, multi-stage sort queries using $unwind and $group for a Crunchbase database and a school grades database.
 5. Added group accumulators like $sum, $avg, $push, and $addToSet.
 
+## An example using $unwind, $group, and $addToSet:
+
+```` javascript
+db.companies.aggregate([
+	
+	// match on relationships that exist
+	{ $match: { "relationships.person" : { $ne: null}}},
+
+	// show name and relationships; hide _id
+	{ $project: {name:1, relationships:1, _id:0}},
+
+	// $unwind deconstructs the relationships array and 
+    // creates a new document for each element of that array
+	{ $unwind: "$relationships" },
+
+	// group by person and count the number of unique
+	// companies that person has worked for
+	{ $group: {
+		_id: "$relationships.person",
+		companies: {$addToSet: "$name"},
+		count: { $sum: 1 }
+	}},
+
+	// sort descending from the person with the most 
+	// companies to the least
+	{ $sort: { count:-1 }}
+	
+]).pretty();
+
+````
+
 ## November 7, 2016 - Completed Week 4 - Schema Design
 1. Analyzed advantages of normalized data in relational databases
 2. Studied database design in Mongo without using design schema
